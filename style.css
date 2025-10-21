@@ -16,6 +16,7 @@ body {
 }
 
 nav a {
+  font-weight: bold;
   color: orange;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.2s ease;
@@ -100,4 +101,41 @@ nav a:hover {
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ======================= PAGE JE SUIS UNE LEGENDE ======================== */
+
+#backgroundIMG {
+  background-image: url("/images/JEsuisBG.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5%;
+  color: white;
+}
+
+#synopsis {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  width: 40%;
+  border-radius: 10px;
+}
+
+#synopsis h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#synopsis p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#infos {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
 }
