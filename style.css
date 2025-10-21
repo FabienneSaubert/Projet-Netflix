@@ -13,6 +13,15 @@ body {
   display: flex;
   align-self: center;
   margin-right: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+#recherche:focus-visible {
+  outline: 2px solid crimson;
+  background-color: rgb(255, 255, 255);
 }
 
 .offres .img-thumbnail {
@@ -21,13 +30,13 @@ body {
 
 nav a {
   font-weight: bold;
-  color: orange;
+  color: rgb(240, 240, 240);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-  color: #fff;
+  color: #a00000;
   transform: scale(1.1);
 }
 
@@ -148,6 +157,6 @@ nav a:hover {
   color: white;
 }
 
-.btn {
+#synopsis .btn {
   width: 25%;
 }
