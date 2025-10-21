@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="/images/FavMetflix.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Metflix</title>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-dark d-flex justify-content-between lh-lg">
+        <!-- LOGO -->
+        <a href="index.html"
+          ><img src="/images/LogoMetflix.png" class="float-left mt-2 logo"
+        /></a>
+
+        <!-- NAVLIST -->
+        <ul class="d-flex justify-content-evenly gap-5 list-unstyled">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#films">Films</a></li>
+          <li><a href="#series">Contact</a></li>
+          <li><a href="#documentaires">A propos</a></li>
+          <li><a href="#">Créer un compte</a></li>
+          <li><a href="#">Se connecter</a></li>
+        </ul>
+        <!-- Zone recherche -->
+        <input
+          id="recherche"
+          type="search"
+          name="recherche"
+          placeholder="Recherchez..."
+        />
+      </nav>
+    </header>
+    <main id="backgroundIMG">
+      <div>
+        <article id="synopsis">
+          <p><strong>Titre original :</strong> I Am Legend</p>
+          <p><strong>Année :</strong> 2007</p>
+          <p><strong>Pays d'origine :</strong>USA</p>
+          <p><strong>Réalisateur(s) :</strong> Francis Lawrence</p>
+          <p><strong>Distribution :</strong> Fox-Warner</p>
+          <p><strong>Durée :</strong> 101 min.</p>
+          <p><strong>Acteurs :</strong> Will Smith, Alice Braga</p>
+          <p><strong>Genre :</strong> Science-fiction</p>
+
+          <p>
+            <strong>Synopsis :</strong> Un terrible virus a décimé la population
+            mondiale. A New York, le docteur Robert Neville, brillant
+            scientifique immunisé, qui a perdu toute sa famille dans la
+            catastrophe, cherche dans la ville déserte un sérum capable de
+            soigner les mutants survivants. Après avoir perdu son chien, unique
+            compagnon dans sa lutte contre les mutants, il est rejoint par la
+            jeune Anna et son fils Ethan qui tentent de gagner le Vermont où
+            vivraient d’autres humains.
+          </p>
+          <div class="d-flex justify-content-center align-content-center gap-4">
+            <input type="button" value="Lecture" class="btn btn-danger" />
+            <input
+              type="button"
+              value="Plus d'infos"
+              class="btn btn-outline-primary"
+            />
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
