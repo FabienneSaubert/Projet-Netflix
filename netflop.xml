@@ -383,33 +383,7 @@
       </resumer>
     </concert>
 
-    <concert xml:id="4">
-      <url>Pictures/f1.jpg</url>
-      <nom>A</nom>
-      <genre>Concert</genre>
-      <realisateur>Laura Poitras</realisateur>
-      <dateSortie>4/03/2015</dateSortie>
-      <resumer>
-        En 2013, Edward Snowden déclenche l’un des plus grands séismes politiques aux Etats-Unis en révélant des
-        documents secret-défense de la NSA. Sous le nom le code « CITIZENFOUR », il contacte la documentariste
-        américaine Laura Poitras. Elle part le rejoindre à Hong Kong et réalise en temps réel CITIZENFOUR,
-        un document historique unique et un portrait intime d’Edward Snowden.
-      </resumer>
-    </concert>
     <concert xml:id="5">
-      <url>Pictures/f1.jpg</url>
-      <nom>Citizenfour</nom>
-      <genre>Concert</genre>
-      <realisateur>Laura Poitras</realisateur>
-      <dateSortie>4/03/2015</dateSortie>
-      <resumer>
-        En 2013, Edward Snowden déclenche l’un des plus grands séismes politiques aux Etats-Unis en révélant des
-        documents secret-défense de la NSA. Sous le nom le code « CITIZENFOUR », il contacte la documentariste
-        américaine Laura Poitras. Elle part le rejoindre à Hong Kong et réalise en temps réel CITIZENFOUR,
-        un document historique unique et un portrait intime d’Edward Snowden.
-      </resumer>
-    </concert>
-    <concert xml:id="6">
       <url>Pictures/f1.jpg</url>
       <nom>Citizenfour</nom>
       <genre>Concert</genre>
