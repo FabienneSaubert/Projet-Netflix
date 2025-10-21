@@ -20,8 +20,9 @@ body {
 }
 
 #recherche:focus-visible {
-  outline: 2px solid crimson;
-  background-color: rgb(255, 255, 255);
+  outline: none;
+  box-shadow: 0 0 15px 5px rgba(220, 20, 60, 0.6);
+  border-radius: 5px;
 }
 
 .offres .img-thumbnail {
@@ -36,7 +37,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #a00000;
+  color: #c70000;
   transform: scale(1.1);
 }
 
