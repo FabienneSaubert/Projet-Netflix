@@ -1,0 +1,103 @@
+body {
+  background: rgb(8, 8, 33);
+}
+
+#recherche {
+  font-size: small;
+  height: 20px;
+  width: 200px;
+  display: flex;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.offres .img-thumbnail {
+  width: 250px;
+}
+
+nav a {
+  color: orange;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+#films {
+  height: 350px;
+}
+#series {
+  height: 350px;
+}
+
+#documentaires {
+  height: 350px;
+}
+
+#concerts {
+  height: 350px;
+}
+
+#friends,
+#taylor {
+  height: 100px;
+}
+
+.section-custom {
+  min-height: 350px;
+}
+
+.bg-gradient-films {
+  background: linear-gradient(90deg, #3c096c, #2d0157, #13001d);
+}
+
+.bg-gradient-series {
+  background: linear-gradient(90deg, #003566, #001022);
+}
+
+.bg-gradient-docu {
+  background: linear-gradient(90deg, #580c00, #1d0b0b);
+}
+
+.bg-gradient-concerts {
+  background: linear-gradient(90deg, #65157a, lch(15.51% 46.57 324.2), #210024);
+}
+
+.film-img {
+  width: 23%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+#series img {
+  height: 180px;
+}
+
+#films a,
+#series a,
+#documentaires a,
+#concerts a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  text-decoration: none;
+}
+
+#films a img,
+#series a img,
+#documentaires a img,
+#concerts a img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

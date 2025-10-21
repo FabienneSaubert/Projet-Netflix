@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="/images/FavMetflix.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Metflix</title>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-dark d-flex justify-content-between lh-lg">
+        <!-- LOGO -->
+        <a href="index.html"
+          ><img src="/images/LogoMetflix.png" class="float-left mt-2"
+        /></a>
+
+        <!-- NAVLIST -->
+        <ul class="d-flex justify-content-evenly gap-5 list-unstyled">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#films">Films</a></li>
+          <li><a href="#series">Contact</a></li>
+          <li><a href="#documentaires">A propos</a></li>
+          <li><a href="#">Créer un compte</a></li>
+          <li><a href="#">Se connecter</a></li>
+        </ul>
+        <!-- Zone recherche -->
+        <input
+          id="recherche"
+          type="search"
+          name="recherche"
+          placeholder="Recherchez..."
+        />
+      </nav>
+
+      <!--=================== Section PROMO / OFFRES =====================-->
+      <section class="gap-4 mb-5">
+        <div class="d-flex text-center flex-column gap-2">
+          <h2 class="text-white fw-bolder">Bienvenue sur METFLIX</h2>
+          <p class="text-white mb-5">
+            Découvrez nos films, séries, documentaires et concerts préférés !
+          </p>
+        </div>
+
+        <!-- CARD BASIC -->
+        <div class="d-flex justify-content-evenly text-center offres">
+          <div class="img-thumbnail shadow-sm">
+            <h3 class="text-warning fw-bold">BASIC</h3>
+            <h4 class="fw-bold">10€ / mois</h4>
+            <ul class="text-start">
+              <li>Accès illimité</li>
+              <li>Support par mail</li>
+              <li>1 utilisateur</li>
+            </ul>
+            <input type="button" value="S'abonner" class="btn btn-success" />
+          </div>
+
+          <!-- CARD STANDARD -->
+          <div class="img-thumbnail offres">
+            <h3 class="text-warning fw-bold">STANDARD</h3>
+            <h4 class="fw-bold">20€ / mois</h4>
+            <ul class="text-start">
+              <li>Accès illimité</li>
+              <li>Support par chat</li>
+              <li>5 utilisateurs</li>
+            </ul>
+            <input type="button" value="S'abonner" class="btn btn-success" />
+          </div>
+
+          <!-- CARD PREMIUM-->
+          <div class="img-thumbnail offres">
+            <h3 class="text-warning fw-bold">PREMIUM</h3>
+            <h4 class="fw-bold">30€ / mois</h4>
+            <ul class="text-start">
+              <li>Accès illimité</li>
+              <li>Support par téléphone</li>
+              <li>Utilisateurs illimités</li>
+            </ul>
+            <input type="button" value="S'abonner" class="btn btn-success" />
+          </div>
+        </div>
+      </section>
+    </header>
+    <!--================================ MAIN ===============================-->
+    <main>
+      <!-- FILMS -->
+      <section id="films" class="section-custom bg-gradient-films py-5">
+        <div class="container">
+          <h3 class="text-white mb-4 fw-bold">Films Populaires</h3>
+          <div class="d-flex flex-nowrap justify-content-between gap-3">
+            <a href="#"
+              ><img
+                src="/images/Eternal.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/Jesuisunelégende.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/Laligneverte.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/LePari.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERIES -->
+      <section id="series" class="section-custom bg-gradient-series py-5">
+        <div class="container">
+          <h3 class="text-white mb-4 fw-bold">Séries Populaires</h3>
+          <div class="d-flex flex-nowrap justify-content-between gap-3">
+            <a href="#"
+              ><img
+                src="/images/TheWitcher.png"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/TheWalkingDeadwebp.png"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/Friends.jpg"
+                id="friends"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/Thelastofus.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCUMENTAIRES -->
+      <section id="documentaires" class="section-custom bg-gradient-docu py-5">
+        <div class="container">
+          <h3 class="text-white mb-4 fw-bold">Documentaires</h3>
+          <div class="d-flex flex-nowrap justify-content-between gap-3">
+            <a href="#"
+              ><img
+                src="/images/LaMarcheDeLEmpereur.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/LesfrèresMenendezjpg.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/DocuEpstein.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/DocuWattswebp.png"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONCERTS -->
+      <section id="concerts" class="section-custom bg-gradient-concerts py-5">
+        <div class="container">
+          <h3 class="text-white mb-4 fw-bold">Concerts</h3>
+          <div class="d-flex flex-nowrap justify-content-between gap-3">
+            <a href="#"
+              ><img
+                src="/images/One-More-Light-Live.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/Taylor-Swift.png"
+                id="taylor"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/640_metallica.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="/images/Slipknot.jpg"
+                class="img-fluid rounded shadow film-img"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
