@@ -27,6 +27,7 @@ function chargerNetflopXml() {
       let xmlDoc = parser.parseFromString(xhr.responseText, "text/xml");
 
       // Appel des fonctions d'affichage
+      // Pour afficher les différentes catégories
       afficherFilmsXML(xmlDoc);
       afficherSeriesXML(xmlDoc);
       afficherDocumentaireXML(xmlDoc);
@@ -179,7 +180,7 @@ function afficherConcertXML(xmlDoc) {
   }
 }
 // ---------------------------------------------------------
-// FONCTION GÉNÉRIQUE POUR CRÉER UNE CARTE
+// FONCTION POUR CRÉER UNE "CARTE"
 // ---------------------------------------------------------
 
 function creerCarteXML(item) {
@@ -232,18 +233,18 @@ function creerCarteXML(item) {
   // Créer un paragraphe pour le genre
   let genreElement = document.createElement("p");
   // innerHTML permet d'insérer du html
-  genreElement.innerHTML = "<strong>Genre :</strong>" + genre;
+  genreElement.innerHTML = "<strong>Genre : </strong>" + genre;
 
   // Créer l'élément réalisateur
   // Créer un paragraphe pour le réalisateur
   let realisateurElement = document.createElement("p");
   realisateurElement.innerHTML =
-    "<strong> Réalisateur :</strong>" + realisateur;
+    "<strong> Réalisateur : </strong>" + realisateur;
 
   // Créer l'élément date de sortir
   // Créer un paragraphe pour la date de sortie
   let dateElement = document.createElement("p");
-  dateElement.innerHTML = "<strong> Date de sortie :</strong> " + dateSortie;
+  dateElement.innerHTML = "<strong> Date de sortie : </strong> " + dateSortie;
 
   // Créer le  conteneur du résumé
   // Créer une div pour contenir le résumé et le bouton
@@ -254,7 +255,7 @@ function creerCarteXML(item) {
   // Créer un paragraphe pour le résumé
   let resumeElement = document.createElement("p");
   resumeElement.className = "resume";
-  resumeElement.innerHTML = "<strong> Résumé :</strong>" + resumer;
+  resumeElement.innerHTML = "<strong> Résumé : </strong>" + resumer;
 
   // Ajouter le résumé au conteneur
   resumerContainer.appendChild(resumeElement);
@@ -274,6 +275,21 @@ function creerCarteXML(item) {
   // On ajoute l'image et les informations à la carte
   card.appendChild(img);
   card.appendChild(infoDiv);
+
+  // Récuperer l'id de l'élément depuis l'attribut "id"
+  let itemId = item.getAttribute("id");
+
+  // Récupérer le nom de la balise XML pour déterminer la catégorie
+  let itemType = item.tagName.toLowerCase();
+
+  // Vérifier que l'id existe avant de rendre la card cliquable
+  if (itemId && itemType) {
+    // Ajouter l'événement au click
+    card.onclick = function () {
+      // Rediriger vers la page détail avec l'id et le type dynamique
+      window.location.href = `pageFilm.html? id = ${itemId} & type = ${itemType}`;
+    };
+  }
 
   // On retourne la carte complète.
   return card;
