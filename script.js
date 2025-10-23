@@ -2,30 +2,30 @@
 // Objet javascript qui va nous permettre de récupérer des fichier json ou JSON
 
 function chargerNetflopJson() {
-  // créer un nouvel objet XMLHttpRequest
+  /* Création d'un objet XMLHttpRequest qui permet de faire des requêtes HTTP depuis le navigateur. 
+Ici, il est utilisé pour charger un fichier JSON. */
   let xhr = new XMLHttpRequest();
 
-  // configurer une requête
-  // utiliser la méthode 'GET' = pour recupérer des données
-  // deuxième paramètres le nom du fichier à charger
-  /* - true = requête asynchrone (ne bloque pas le navigateur et l'exécution du 
-  code) */
+  /* Configuration de la requête : On configure une requête de type GET (premier paramètre) pour récupérer 
+  le fichier "netflop.json" (deuxième paramètre). Le troisième paramètre true indique 
+  que la requête est asynchrone (le navigateur ne sera pas bloqué en attendant la réponse).*/
 
   xhr.open("GET", "netflop.json", true);
 
-  // Définir le gestionnaire d'événement pour le chargement
+  /* Gestion de la réponse : Lorsqu'une réponse est reçue (onload), on affiche le 
+  code de statut de la requête HTTP dans la console (par exemple, 200 signifie "succès"). */
   xhr.onload = function () {
     console.log("Status de la requête:", xhr.status);
-    // vérifie si la requête réussie
-    // status 200  = OK (succès)
-    if (xhr.status === 200) {
-      // Parser la réponse du serveur avec DOMparser(); (parse = parcourir/analyse le fichier)
-      let data = JSON.parse(xhr.responseText);
 
+    /* Vérification du succès : Si le statut est 200 (succès), on utilise JSON.parse() 
+    pour convertir la réponse JSON en objet JavaScript. La réponse est ensuite affichée dans la console.*/
+    if (xhr.status === 200) {
+      let data = JSON.parse(xhr.responseText);
       console.log(data);
 
-      // Appel des fonctions d'affichage
-      // Pour afficher les différentes catégories
+      /* Appels aux fonctions d'affichage : Une fois les données récupérées et transformées, 
+  elles sont envoyées à différentes fonctions pour les afficher sous forme de cartes 
+  pour les films, séries, documentaires, mangas, etc. */
       afficherFilmsJSON(data.netflop.films.film);
       afficherSeriesJSON(data.netflop.series.serie);
       afficherDocumentaireJSON(data.netflop.documentaires.documentaire);
@@ -46,7 +46,7 @@ function chargerNetflopJson() {
     alert("Impossible de charger les données. Vérifiez votre connexion !");
   };
 
-  // Envoyer la requête
+  // Envoi de la requête : La requête est envoyée au serveur.
   xhr.send();
 }
 
@@ -55,14 +55,17 @@ function chargerNetflopJson() {
 // ---------------------------------------------------------
 
 function afficherFilmsJSON(films) {
-  // Récupérer le conteneur HTML où afficher les films
-  let container = document.getElementById("films");
+  /* On crée un conteneur pour afficher les films. 
+D'abord, on récupère un élément HTML (avec getElementById) où les films vont être affichés. 
+Ensuite, on crée un titre et un conteneur pour les cartes (les éléments de film). */
+
+  let container = document.getElementById("films"); //Création du conteneur :
 
   // Créer un titre pour la section
   let titre = document.createElement("h2");
   titre.textContent = "Films";
 
-  let cardsContainer = document.createElement("div");
+  let cardsContainer = document.createElement("div"); // Creation d'une div supplémentaire pour css du titre
   cardsContainer.className = "cards-container";
 
   container.appendChild(titre);
@@ -74,8 +77,9 @@ function afficherFilmsJSON(films) {
 
   console.log(films);
 
-  /* Parcourir tous les films (attention films est un HTMLCollection, du coup pas
-  vrai tableau) */
+  /* On parcourt le tableau de films et pour chaque film, 
+  on appelle la fonction creerCarteJSON() pour créer une carte de film. Cette carte 
+  est ajoutée au conteneur. */
   for (let i = 0; i < films.length; i++) {
     let filmCard = creerCarteJSON(films[i], "film");
     cardsContainer.appendChild(filmCard);
@@ -204,9 +208,10 @@ function afficherConcertJSON(concerts) {
 // ---------------------------------------------------------
 
 function creerCarteJSON(item, itemType) {
-  // creer le conteneur de la carte
-  // creer une div pour la carte
-  let card = document.createElement("div");
+  /* Création d'une carte : Une nouvelle div est créée pour servir de conteneur à une carte. 
+On lui assigne une classe CSS card pour le style. */
+
+  let card = document.createElement("div"); // creer une div pour la carte
   card.className = "card";
 
   console.log(item);
@@ -234,6 +239,7 @@ function creerCarteJSON(item, itemType) {
   // Image
   // Créer un élement img pour afficher l'image
   let img = document.createElement("img");
+
   // Définir la source de l'image
   img.src = url;
   img.alt = nom;
