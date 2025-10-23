@@ -1,14 +1,27 @@
 body {
+  margin: 0;
+  padding: 0;
   background: rgb(8, 8, 33);
+}
+
+.logo {
+  width: 180px;
+  vertical-align: middle;
 }
 
 #recherche {
   font-size: small;
-  height: 20px;
+  height: 30px;
   width: 200px;
   display: flex;
   align-self: center;
   margin-right: 10px;
+}
+
+#recherche:focus-visible {
+  outline: none;
+  box-shadow: 0 0 15px 5px rgba(220, 20, 60, 0.6);
+  border-radius: 5px;
 }
 
 .offres .img-thumbnail {
@@ -16,38 +29,15 @@ body {
 }
 
 nav a {
-  color: orange;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-  color: #fff;
+  color: #c70000;
   transform: scale(1.1);
-}
-
-#films {
-  height: 350px;
-}
-#series {
-  height: 350px;
-}
-
-#documentaires {
-  height: 350px;
-}
-
-#concerts {
-  height: 350px;
-}
-
-#friends,
-#taylor {
-  height: 100px;
-}
-
-.section-custom {
-  min-height: 350px;
 }
 
 .bg-gradient-films {
@@ -66,38 +56,67 @@ nav a:hover {
   background: linear-gradient(90deg, #65157a, lch(15.51% 46.57 324.2), #210024);
 }
 
-.film-img {
-  width: 23%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.section-custom {
+  padding: 20px;
 }
 
-.film-img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+.section-custom h2 {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-#series img {
-  height: 180px;
-}
-
-#films a,
-#series a,
-#documentaires a,
-#concerts a {
+.card {
+  min-width: 250px;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  text-decoration: none;
+  flex-direction: column;
 }
 
-#films a img,
-#series a img,
-#documentaires a img,
-#concerts a img {
+.card:hover {
+  transform: translateY(-0.2in);
+}
+
+.card-image {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+.card-info h3 {
+  margin: 5px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card-info p {
+  margin: 3px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.resume-container {
+  margin-top: 10px;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.resume {
+  font-size: 0.85em;
+  color: #444;
+}
+
+.card-image {
+  height: 280px;
 }
