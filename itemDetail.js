@@ -64,7 +64,7 @@ function chercherItemParType(data, itemId, itemType) {
     serie: { categorie: "series", tableau: data.netflop.series.serie },
     documentaire: {
       categorie: "documentaires",
-      tableau: data.netflop.documentaires.ducumentaire,
+      tableau: data.netflop.documentaires.documentaire,
     },
     manga: { categorie: "mangas", tableau: data.netflop.mangas.manga },
     anime: { categorie: "animes", tableau: data.netflop.animes.anime },

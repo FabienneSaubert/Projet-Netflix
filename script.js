@@ -61,7 +61,12 @@ function afficherFilmsJSON(films) {
   // Créer un titre pour la section
   let titre = document.createElement("h2");
   titre.textContent = "Films";
+
+  let cardsContainer = document.createElement("div");
+  cardsContainer.className = "cards-container";
+
   container.appendChild(titre);
+  container.appendChild(cardsContainer);
 
   // Récupérer TOUS les elements <films> du JSON
   /* getElementsByTagName() retourne une collection de tous les élements avec 
@@ -73,7 +78,7 @@ function afficherFilmsJSON(films) {
   vrai tableau) */
   for (let i = 0; i < films.length; i++) {
     let filmCard = creerCarteJSON(films[i], "film");
-    container.appendChild(filmCard);
+    cardsContainer.appendChild(filmCard);
   }
 }
 
@@ -82,12 +87,17 @@ function afficherSeriesJSON(series) {
 
   let titre = document.createElement("h2");
   titre.textContent = "Séries";
+
+  let cardsContainer = document.createElement("div");
+  cardsContainer.className = "cards-container";
+
   container.appendChild(titre);
+  container.appendChild(cardsContainer);
 
   console.log(series);
   for (let i = 0; i < series.length; i++) {
     let serieCard = creerCarteJSON(series[i], "serie");
-    container.appendChild(serieCard);
+    cardsContainer.appendChild(serieCard);
   }
 }
 
@@ -96,12 +106,17 @@ function afficherDocumentaireJSON(documentaires) {
 
   let titre = document.createElement("h2");
   titre.textContent = "Documentaires";
+
+  let cardsContainer = document.createElement("div");
+  cardsContainer.className = "cards-container";
+
   container.appendChild(titre);
+  container.appendChild(cardsContainer);
 
   console.log(documentaires);
   for (let i = 0; i < documentaires.length; i++) {
-    let docCard = creerCarteJSON(documentaires[i], "documentaire");
-    container.appendChild(docCard);
+    let documentaireCard = creerCarteJSON(documentaires[i], "documentaire");
+    cardsContainer.appendChild(documentaireCard);
   }
 }
 
@@ -110,12 +125,17 @@ function afficherMangaJSON(mangas) {
 
   let titre = document.createElement("h2");
   titre.textContent = "Mangas";
+
+  let cardsContainer = document.createElement("div");
+  cardsContainer.className = "cards-container";
+
   container.appendChild(titre);
+  container.appendChild(cardsContainer);
 
   console.log(mangas);
   for (let i = 0; i < mangas.length; i++) {
     let mangaCard = creerCarteJSON(mangas[i], "manga");
-    container.appendChild(mangaCard);
+    cardsContainer.appendChild(mangaCard);
   }
 }
 
@@ -124,12 +144,17 @@ function afficherAnimeJSON(animes) {
 
   let titre = document.createElement("h2");
   titre.textContent = "Animés";
+
+  let cardsContainer = document.createElement("div");
+  cardsContainer.className = "cards-container";
+
   container.appendChild(titre);
+  container.appendChild(cardsContainer);
 
   console.log(animes);
   for (let i = 0; i < animes.length; i++) {
     let animeCard = creerCarteJSON(animes[i], "anime");
-    container.appendChild(animeCard);
+    cardsContainer.appendChild(animeCard);
   }
 }
 
@@ -137,29 +162,43 @@ function afficherShowJSON(shows) {
   let container = document.getElementById("shows");
 
   let titre = document.createElement("h2");
-  titre.textContent = "Show";
+  titre.textContent = "Shows";
+
+  let cardsContainer = document.createElement("div");
+  cardsContainer.className = "cards-container";
+
   container.appendChild(titre);
+  container.appendChild(cardsContainer);
 
   console.log(shows);
   for (let i = 0; i < shows.length; i++) {
     let showCard = creerCarteJSON(shows[i], "show");
-    container.appendChild(showCard);
+    cardsContainer.appendChild(showCard);
   }
 }
 
 function afficherConcertJSON(concerts) {
   let container = document.getElementById("concerts");
 
+  // Crée le titre
   let titre = document.createElement("h2");
   titre.textContent = "Concerts";
-  container.appendChild(titre);
 
-  console.log(concerts);
+  // Crée un sous-conteneur pour les cartes
+  let cardsContainer = document.createElement("div");
+  cardsContainer.className = "cards-container"; // ✅ pour le style
+
+  // Ajoute le titre et le bloc de cartes
+  container.appendChild(titre);
+  container.appendChild(cardsContainer);
+
+  // Ajoute les cartes à la bonne div
   for (let i = 0; i < concerts.length; i++) {
     let concertCard = creerCarteJSON(concerts[i], "concert");
-    container.appendChild(concertCard);
+    cardsContainer.appendChild(concertCard);
   }
 }
+
 // ---------------------------------------------------------
 // FONCTION POUR CRÉER UNE "CARTE"
 // ---------------------------------------------------------

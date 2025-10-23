@@ -57,14 +57,26 @@ nav a:hover {
 }
 
 .section-custom {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 20px;
 }
 
 .section-custom h2 {
   color: #fff;
   font-size: 2em;
-  text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .card {
@@ -76,10 +88,13 @@ nav a:hover {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-0.2in);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .card-image {
