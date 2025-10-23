@@ -287,7 +287,7 @@ function creerCarteXML(item) {
     // Ajouter l'événement au click
     card.onclick = function () {
       // Rediriger vers la page détail avec l'id et le type dynamique
-      window.location.href = `pageFilm.html? id = ${itemId} & type = ${itemType}`;
+      window.location.href = `pageFilm.html?id=${itemId}&type=${itemType}`;
     };
   }
 
