@@ -34,7 +34,7 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* --- Structure globale --- */
+/* Structure globale */
 body {
   margin: 0;
   padding: 0;
@@ -48,7 +48,7 @@ body {
 #item-detail {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 135vh;
   overflow: hidden;
 }
 
@@ -57,13 +57,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 800px;
+  height: 1000px;
   object-fit: cover;
   filter: brightness(60%) blur(2px);
   z-index: 1;
 }
 
-/* Bloc d'information à gauche */
+/* Bloc infos */
 .card-info {
   position: relative;
   z-index: 2;
@@ -108,17 +108,6 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: #ccc;
-}
-
-#item-detail::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  z-index: 1;
 }
 
 .card-info {

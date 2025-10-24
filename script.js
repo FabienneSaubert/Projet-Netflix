@@ -24,8 +24,8 @@ Ici, il est utilisé pour charger un fichier JSON. */
       console.log(data);
 
       /* Appels aux fonctions d'affichage : Une fois les données récupérées et transformées, 
-  elles sont envoyées à différentes fonctions pour les afficher sous forme de cartes 
-  pour les films, séries, documentaires, mangas, etc. */
+      elles sont envoyées à différentes fonctions pour les afficher sous forme de cartes 
+      pour les films, séries, documentaires, mangas, etc. */
       afficherFilmsJSON(data.netflop.films.film);
       afficherSeriesJSON(data.netflop.series.serie);
       afficherDocumentaireJSON(data.netflop.documentaires.documentaire);
